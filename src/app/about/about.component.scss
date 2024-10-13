@@ -1,0 +1,132 @@
+@use '../../styles/colors.scss' as color;
+
+.about-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        ". about about about ."
+        ". skill skill skill ."
+        ". experience experience icon .";
+    color: color.$color-neutral;
+    background-color: color.$color-default;
+    height: 100%;
+    min-height: 100vh;
+
+    .about-intro {
+        grid-area: about;
+        padding-top: 5rem;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+            "avatar text"
+            "avatar text "
+            "avatar text";
+        align-items: center;
+        text-align: center;
+        margin-bottom: 40px;
+
+        .board {
+            grid-area: avatar;
+            max-width: 17.5rem;
+            justify-self: start;
+        }
+
+        .avatar {
+            grid-area: avatar;
+            justify-self: end;
+            border-radius: 50%;
+            width: 15rem;
+            height: 15rem;
+            object-fit: cover;
+        }
+
+        .about-me {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            grid-area: text;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas:
+            "tittle"
+            "text"
+            "text";
+            
+            h1 {
+                grid-area: tittle;
+                font-size: 2.25rem;
+                color: color.$color-accent;
+                margin-bottom: 1rem;
+            }
+            
+            p {
+                grid-area: text;
+                font-size: 1.25rem;
+                line-height: 1.6;
+                max-width: 700px;
+                margin: 0;
+                text-align: left;
+            }
+        }
+    }
+
+    .skills {
+        grid-area: skill;
+        text-align: center;
+        margin-bottom: 40px;
+
+        h2 {
+            font-size: 1.75rem;
+            margin-bottom: 20px;
+            color: color.$color-light;
+        }
+    }
+
+    .experience {
+        grid-area: experience;
+        margin-bottom: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+
+        h2 {
+            font-size: 1.75rem;
+            margin-bottom: 20px;
+            color: color.$color-light;
+        }
+
+        .timeline {
+            list-style: none;
+            padding-left: 0;
+
+            li {
+                margin-bottom: 15px;
+                font-size: 1rem;
+
+                strong {
+                    color: color.$color-accent;
+                }
+            }
+        }
+
+        .buttons {
+            display: flex;
+            width: 100%;
+            justify-content: left;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+    }
+
+    .experience-icon {
+        max-width: 70%;
+        grid-area: icon;
+        align-self: start;
+        justify-self: center;
+
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+@use '../../styles/colors.scss' as color;
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+
+    background-color: color.$color-default;
+
+    .avatar {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 4rem;
+        margin: 0;
+        color: color.$color-light;
+    }
+
+    h2 { // REMOVER
+        font-size: 2rem;
+        margin: 0;
+        color: color.$color-light;
+    }
+
+    p {
+        font-size: 1.5rem;
+        color: color.$color-neutral;
+    }
+}

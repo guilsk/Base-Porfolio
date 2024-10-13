@@ -1,0 +1,26 @@
+@use '../../../styles/colors.scss' as color;
+
+a {
+    display: inline-block;
+    white-space: nowrap;
+    text-align: center;
+    text-overflow: ellipsis;
+
+    background-color: color.$color-accent;
+    color: color.$color-light;
+    padding: 0.625rem 1.25rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: color.$color-secondary;
+    }
+}
+
+button {
+    text-align: center;
+    margin-right: 1rem;
+    padding-bottom: 5rem;
+}

@@ -1,0 +1,26 @@
+@use '../../../styles/colors.scss' as color;
+
+.skill-list {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding-left: 0;
+
+    li {
+        background-color: color.$color-secondary;
+        padding: 10px 15px;
+        border-radius: 5px;
+        list-style: none;
+        font-size: .9rem;
+        font-weight: bold;
+        cursor: default;
+        user-select: none;
+        transition: background-color 0.1s ease;
+
+        &:hover {
+            background-color: color.$color-accent;
+            color: color.$color-light;
+        }
+    }
+}

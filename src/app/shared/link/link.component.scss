@@ -1,0 +1,24 @@
+@use '../../../styles/colors.scss' as color;
+
+.link {
+    color: color.$color-accent;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease, color 0.3s ease;
+
+    &:focus,
+    &:active {
+        outline: none;
+        color: color.$color-secondary;
+    }
+
+    &:visited {
+        color: color.$color-accent;
+    }
+
+    &:hover {
+        color: color.$color-light;
+        border-bottom-color: color.$color-accent;
+    }
+}

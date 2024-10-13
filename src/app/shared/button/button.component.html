@@ -1,0 +1,5 @@
+<!-- Se houver um href, renderiza um link -->
+<a *ngIf="href" [href]="href" [attr.target]="target" class="button">{{ text }}</a>
+
+<!-- Se não houver href, renderiza um botão -->
+<button *ngIf="!href" [disabled]="disabled" class="button">{{ text }}</button>
