@@ -11,7 +11,7 @@ O projeto está **incompleto** e sem previsão de continuação no momento. Ele 
 - Estudar e aplicar **CSS Grid** para a criação de layouts flexíveis e responsivos.
 
 ## Tecnologias Utilizadas
-Angular
-SCSS
+- Angular
+- SCSS
 
 > Nota: Este projeto é voltado exclusivamente para fins de estudo e aprimoramento técnico.
